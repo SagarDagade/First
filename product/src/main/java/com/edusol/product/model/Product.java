@@ -1,23 +1,27 @@
 package com.edusol.product.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import antlr.collections.List;
 
 @Entity
+@Table(name = "PRODUCT_MART")
 public class Product {
 	
 	@Id
+	@Column(name = "PRODUCT_ID")
 	private int p_id;
-	
+	@Column(name = "PRODUCT_NAME")
 	private String p_name;
-	
+	@Column(name = "PRODUCT_PRICE")
 	private long price;
-	
+	@Column(name = "PRODUCT_DESC")
 	private String desc;
-	
+	@Column(name = "PRODUCT_QUAN")
 	private int quantity=1;
 	
 

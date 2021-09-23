@@ -11,16 +11,21 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Entity
+@Table(name = "customers")
 public class Customer {
 
 	@Id
+	@Column(name = "cust_id")
 	private int c_id;
+	@Column(name = "cust_name")
 	private String c_name;
+	@Column(name = "cust_city")
 	private String city;
 	
 	
